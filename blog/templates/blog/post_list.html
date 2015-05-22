@@ -5,7 +5,21 @@
         </title>
     </head>
     <body>
-        <p>Mao mao mao</p>
-        <p>Meow meow meow</p>
+        <div>
+            <h1>
+                <a href="#">
+                    Django girls speedrun
+                </a>
+            </h1>
+        </div>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <p><a href="">{{ post.title }}</a> </p>
+                    <p>{{ post.text|linebreaks }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
